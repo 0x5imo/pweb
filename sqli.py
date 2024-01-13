@@ -1,34 +1,16 @@
-from urllib.request import urlopen
-import mechanicalsoup
-
-
-def checkForm(browser, login_page, login_html):
-    forms = login_html.select("form")
-
-    if len(forms) == 0:
-        return False
-
-    # 2
-    form = forms[0]
-    form.select("input")[0]["value"] = "zeus"
-    form.select("input")[1]["value"] = "ThunderDude"
-
-    # 3
-    profiles_page = browser.submit(form, login_page.url)
-    
-    return True
-
-
-
+import subprocess
 
 def sqlicheck(url):
 
-    # 1
-    browser = mechanicalsoup.Browser()
-    login_page = browser.get(url)
-    login_html = login_page.soup
+    sqlmap_command = "sqlmap -u" + url + "  --level 5 --risk 3 --batch"
+    print(subprocess.run(sqlmap_command, shell=True))
 
-    checkForm(browser, login_page,login_html)
+
+if __name__ == '__main__':
+    sqlicheck('google.com')
+
+
+
 
 
 
