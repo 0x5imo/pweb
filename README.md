@@ -4,6 +4,6 @@ Automation tool to scan a web challenge ctf for vulnerabilities to help find the
 
 # dependencies
 ```shell
-
+pip install beautifulsoup4
 ``` 
 
