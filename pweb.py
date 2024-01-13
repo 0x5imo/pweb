@@ -1,13 +1,6 @@
-print(' ')
-print(' ')
-print('''\033[1;36;40m ______        _______ ____  
-|  _ \ \      / / ____| __ ) 
-| |_) \ \ /\ / /|  _| |  _ \ 
-|  __/ \ V  V / | |___| |_) |
-|_|     \_/\_/  |_____|____/ ''')
-print(' ')
-print('''\033[1;31;40m Example:
-\033[1;36;40m pweb --help \033[1;31;40m #help
-\033[1;36;40m pweb -u link.com \033[1;31;40m #url to scan 
+from cli_header import header
+from pinger import statuscheck
 
-\033[1;36;40m===============================================''')
+
+
+
