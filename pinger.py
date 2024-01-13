@@ -1,12 +1,27 @@
-import socket
-from pythonping import ping
-
-    
+import os
 
 def statuscheck(url):
-    pass
+    response = os.system("ping -c 1 " + url)
+    if response == 0:
+        print(f"{url} is up!")
+    else:
+        print(f"{url} is down!")
 
 
-print(ping.verbose_ping('www.google.com', count=3))
+
+
+if __name__ == "__main__":
+    statuscheck('127.0.0.1')
+
+
+
+
+
+
+
+
+
+
+
 
 
