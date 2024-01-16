@@ -15,7 +15,7 @@ python pweb.py -hh
 
 # dependencies
 ```shell
-pip install MechanicalSoup
+git clone https://github.com/s0md3v/XSStrike
 ``` 
 ```shell
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
