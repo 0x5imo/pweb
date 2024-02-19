@@ -5,5 +5,7 @@ def portscan(ip):
     print(response)
 
 
-print(portscan("127.0.0.1"))
+
+if __name__ == '__main__':
+    portscan('127.0.0.1')
     
